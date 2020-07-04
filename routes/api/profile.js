@@ -13,9 +13,9 @@ const { response } = require('express');
 // @access  private
 router.get('/me', auth, async (req, res) => {
     try{
-        const profile = await Profile.findOne({ user: req.user._id }).populate('user', ['name', 'avatar']);
+        const profile = await Profile.findOne({ user: req.user.id }).populate('user', ['name', 'avatar']);
         if(!profile){
-            return res.status(400).json({ msg: "'there is not profile for this user" });
+            return res.status(400).json({ msg: "'there is no profile for this user" });
         }
         res.json(profile);
     } catch(err){
