@@ -34,11 +34,11 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
             skills: loading || !profile.skills ? '' : profile.skills.join(','),
             githubusername: loading || !profile.githubusername ? '' : profile.githubusername,
             bio: loading || !profile.bio ? '' : profile.bio,
-            twitter: loading || !profile.twitter ? '' : profile.twitter,
-            facebook: loading || !profile.facebook ? '' : profile.facebook,
-            linkedin: loading || !profile.linkedin ? '' : profile.linkedin,
-            youtube: loading || !profile.youtube ? '' : profile.youtube,
-            instagram: loading || !profile.instagram ? '' : profile.instagram
+            twitter: loading || !profile.sociallinks ? '' : profile.sociallinks.twitter,
+            facebook: loading || !profile.sociallinks ? '' : profile.sociallinks.facebook,
+            linkedin: loading || !profile.sociallinks ? '' : profile.sociallinks.linkedin,
+            youtube: loading || !profile.sociallinks ? '' : profile.sociallinks.youtube,
+            instagram: loading || !profile.sociallinks ? '' : profile.sociallinks.instagram
         });
     }, [loading]);
 
@@ -48,7 +48,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
 
     const onSubmit = (e) => {
         e.preventDefault();
-        createProfile(formData, history);
+        createProfile(formData, history, true);
     } 
 
     return (
@@ -156,7 +156,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
 
                 
                 <input type="submit" className="btn btn-primary my-1" />
-                <a className="btn btn-light my-1" href="dashboard.html">Go Back</a>
+                <Link className="btn btn-light my-1" to="/dashboard">Go Back</Link>
             </form>
         </Fragment>
     )
