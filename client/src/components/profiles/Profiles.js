@@ -9,14 +9,14 @@ import ProfileItem from './ProfileItem';
 const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
     useEffect(() => {
         getProfiles();
-    }, []);
+    }, [getProfiles]);
 
     return (
         <Fragment>
             { loading ? <Spinner /> : <Fragment>
                 <h1 className="large text-primary">Developers</h1>
                 <p className="lead">
-                    <i className="fab fa-connectdevelop"></i> Browse and connect with Developers
+                    <i className="fa fa-connectdevelop"></i> Browse and connect with Developers
                 </p>
                 <div className="profiles">
                     { profiles.length > 0 ? (

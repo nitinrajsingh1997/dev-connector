@@ -40,7 +40,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
             youtube: loading || !profile.sociallinks ? '' : profile.sociallinks.youtube,
             instagram: loading || !profile.sociallinks ? '' : profile.sociallinks.instagram
         });
-    }, [loading]);
+    }, [loading, getCurrentProfile]);
 
     const { company, website, location, bio, status, githubusername, skills, youtube, facebook, twitter, instagram , linkedin } = formData;
 
