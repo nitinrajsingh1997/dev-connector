@@ -35,19 +35,40 @@ const ProfileTop = ({ profile: {
                 </a>
               )
           }
-            
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-facebook fa-2x"></i>
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-linkedin fa-2x"></i>
-            </a>
-             <a href="#" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-youtube fa-2x"></i>
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-instagram fa-2x"></i>
-            </a>
+
+          {
+            sociallinks && sociallinks.facebook && (
+              <a href={sociallinks.facebook} target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook fa-2x"></i>
+              </a>
+            )
+          }
+
+          {
+            sociallinks && sociallinks.linkedin && (
+              <a href={sociallinks.linkedin} target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin fa-2x"></i>
+              </a>
+            )
+          }
+
+          {
+            sociallinks && sociallinks.youtube && (
+              <a href={sociallinks.youtube} target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-youtube fa-2x"></i>
+              </a>
+            )
+          } 
+
+
+          {
+            sociallinks && sociallinks.instagram && (
+              <a href={sociallinks.instagram} target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram fa-2x"></i>
+              </a>              
+            )
+          } 
+
           </div>
         </div>
 
