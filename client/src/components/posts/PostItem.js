@@ -30,9 +30,7 @@ const PostItem = ({ addLike, removeLike, deletePost, auth, post: { _id, text, na
             { showActions && <Fragment>
               <button onClick={e => addLike(_id)} type="button" class="btn btn-light">
               <i class="fa fa-thumbs-up"></i>{' '}
-              <span>{likes.length > 0 && (
-                  <span>{likes.length}</span>
-              )}</span>
+              <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
               </button>
               <button onClick={e => removeLike(_id)} type="button" class="btn btn-light">
                 <i class="fa fa-thumbs-down"></i>

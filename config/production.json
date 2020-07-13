@@ -1,0 +1,7 @@
+{
+    "mongoURI": "mongodb+srv://dev-social-media:dev-social-media@cluster0-deqml.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "becc3345b80956e5a849",
+    "githubSecret": "a76bfb70ddba6d784a7c31881dc06606f56399b7"
+
+}
